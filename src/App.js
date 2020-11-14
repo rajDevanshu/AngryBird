@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import Header from './Header';
+import BelowHeader from './BelowHeader'
+import Body from './Body';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+   constructor() {
+      super();
+      this.state = {
+        
+         date: 4555,
+         shown: false
+      }
+   }
+   getWindowDimensions = () => {
+      const { innerWidth: width, innerHeight: height } = window;
+      return {
+        width,
+        height
+      };
+    }
+   
+   render() {
+      
+      return (
+         <div style={{backgroundColor:'#eeeeee', height: window.innerHeight}} className="container">
+         
+         <div className="done">
+            <Header/>
+
+         </div>
+         <BelowHeader />
+         <Body />
+         </div>
+      );
+   }
 }
 
+
 export default App;
+
