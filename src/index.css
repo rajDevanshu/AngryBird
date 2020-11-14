@@ -283,7 +283,7 @@ code {
 }
 .ss{
   width: 100px;
-  height: 100px;
+  height: 90px;
   margin: 15px;
   border-radius: 15px;
   margin-top: 25px;
@@ -405,7 +405,7 @@ html[data-theme='dark'] .popup-arrow > svg {
 img.ss:hover,
 img.ss:focus {
   width: 104px;
-  height: 102px;
+  height: 92px;
   box-shadow: 0 2px 6px 0 rgb(173, 171, 171), 0 6px 10px 0 rgb(173, 171, 171);
 }
 .popup-content {
