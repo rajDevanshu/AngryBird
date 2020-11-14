@@ -41,7 +41,7 @@ export default class Body extends React.Component {
                 
                
                     <div className="CoverImage">
-                        <img src="https://coverfiles.alphacoders.com/578/57843.jpg"
+                        <img src="https://lh3.googleusercontent.com/proxy/ORVTFF6_HlgFsTg08JHtd9am_Oz9XPsDrq1zw2vFKjpXNtVWcd8YV235yPOwgPpPPwiZSGiehNJFIFAn4sIR3mBc45SnIzfi6Q"
                         alt="cover" className="Images"/>               
                     </div>   
 
