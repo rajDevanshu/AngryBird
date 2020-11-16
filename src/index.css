@@ -16,6 +16,10 @@ code {
   display: flex;
   margin-left: 50px;
 }
+@media only screen and (max-width: 1000px) {
+  .header1{
+    margin-left: 10px;
+  }}
 .mov{
   color: red;
   margin-top: 8px;
@@ -47,6 +51,13 @@ code {
   margin-right: -30px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
+@media only screen and (max-width: 1000px) {
+  .buttons{
+    width:150px;
+    height:28px;
+    margin-left: 10px;
+  }
+}
 .buttonUnpress{
   height: 24px;
   margin-left: 50px;
@@ -61,6 +72,13 @@ code {
   cursor: pointer;
   margin-right: -30px;
 }
+@media only screen and (max-width: 1000px) {
+  .buttonUnpress{
+    width:150px;
+    height:27px;
+    margin-left: 34px;
+  }
+}
 .InputHeader{
   margin-left: 40px;
   border-top-width: 0px;
@@ -70,6 +88,12 @@ code {
   border-bottom-width: 0.1px;
   width: 40%;
   border-bottom-color: rgb(216, 212, 212);
+}
+@media only screen and (max-width: 1000px) {
+  .InputHeader{
+    width:0px;
+    visibility: hidden;
+  }
 }
 .bell{
   margin-top: 13px;
@@ -81,6 +105,10 @@ code {
   border-radius: 8px;
   padding: 3px;
 }
+@media only screen and (max-width: 1000px) {
+  .bell{
+    margin-left: 5px;
+}}
 .done {
   flex-direction: row;
   color: grey;
@@ -113,6 +141,19 @@ code {
   background-color: transparent;
   border-color: transparent;
 }
+@media only screen and (max-width: 1000px) {
+  .profile{
+    
+    margin-left: 5px;
+    margin-top: -2px;
+  }
+}
+.Hello{
+  font-size :12px;
+  margin-top :18px;
+  margin-left:20px;
+  font-weight: bold;
+  color: #000;}
 .example-enter{
   opacity: 0.01;
 }
@@ -156,6 +197,15 @@ code {
   
   justify-content: center;
 }
+
+@media only screen and (max-width: 1000px) {
+  .MainBody {
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  }
+}
+
 .LeftBody{
   background-color: #fff;
   width:70%;
@@ -184,6 +234,11 @@ code {
   border-radius: 55px;
   position: relative;
 }
+@media only screen and (max-width: 1000px){
+  .LeftBody{
+  width:100%;  
+  }
+}
 
 .RightBody{
 
@@ -192,6 +247,14 @@ code {
   border-radius: 12px;
   margin-top: -22px;
   
+}
+@media only screen and (max-width: 1000px){
+    .RightBody{
+        width: 90%;
+        margin: 25px;
+        justify-content: center;
+        align-self: center;
+    }
 }
 .CoverImage{
   align-self: center;
@@ -224,24 +287,35 @@ code {
   background-color: #fff;
   display: flex;
 }
+@media only screen and (max-width: 1000px){
+  .TitleMovie{
+  display: inline;
+  }
+}
 .mainTitle{
   justify-content: center;
   display: flex;
   align-items: center;
   margin-top: -34px;
   background-color: #fff;
-  
 }
 .WatchLater{
   background-color: transparent;
   border-color: rgb(120, 18, 236);
   height:31px;
-  margin-left: 130px;
+  margin-left: 110px;
   margin-top:6px;
   width: 25%;
   border-width: 0.1px 0.1px 0.5px 1px;
   border-radius: 14px;
   cursor: pointer;
+}
+@media only screen and (max-width: 1000px){
+  .WatchLater{
+    width: 200px;
+    margin-bottom: 10px;
+    justify-self: center;
+  }
 }
 
 .WatchLaterPressed{
@@ -257,6 +331,13 @@ code {
   color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
+@media only screen and (max-width: 1000px){
+  .WatchLaterPressed{
+    width: 200px;
+    margin-bottom: 10px;
+
+  }
+}
 .Direction{
   color:grey;
   font-size: 12px;
@@ -267,10 +348,37 @@ code {
   display: flex;
   
 }
+@media only screen and (max-width: 1000px){
+  .Cast{
+    display: inline;
+    height:50px;
+  overflow-y: scroll;
+  width:20px;
+  }
+}
 .castName{
   margin-left: 10px;
   margin-top: 5px;
   margin-right: 15px;
+}
+.castNames{
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+@media only screen and (max-width: 1000px){
+  .castNames{
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 1000px){
+  .castName{
+    margin-left: 40px;
+  margin-top: -20px;
+  margin-right: 15px;
+  width:40%;
+  
+  }
 }
 .casting{
   margin-top: 15px;
@@ -281,6 +389,12 @@ code {
   margin-top: -15px;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 1000px){
+  .Screenshot{
+    display: inline;
+  }
+} 
+
 .ss{
   width: 100px;
   height: 90px;
@@ -298,6 +412,10 @@ code {
   height: 100px;
   margin-top: -10px;
 }
+@media only screen and (max-width: 1000px){
+  .ss2{
+    width: 60%;
+}}
 .topPath{
   display: flex;
   margin-left: 29px;
@@ -327,6 +445,11 @@ code {
 .description{
   margin-left: 5px;
 }
+@media only screen and (max-width: 1000px){
+  .description{
+    margin-left: 25px;
+  }
+}
 .titleMovie{
   font-size: 11px;
  margin-top: 1px;
@@ -355,6 +478,10 @@ code {
   width:70%;
   justify-content: center;
 }
+@media only screen and (max-width: 1000px){
+  .des{
+  width: 95%;}
+  }
 .toastify{
   font-Family: Comic Sans MS;
   color: rgb(226, 225, 225);
@@ -395,6 +522,19 @@ code {
   font-size: 11px;
   color: rgb(75, 74, 74);
 }
+.popups{
+  display: flex;
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: rgb(75, 74, 74);
+}
+@media only screen and (max-width: 1000px){
+  .popup{
+margin-left: 0px;
+margin-top: 20px;
+  }
+}
 html[data-theme='dark'] .popup-arrow > svg {
   color: rgb(41, 45, 62);
   stroke-width: 2px;
@@ -402,6 +542,14 @@ html[data-theme='dark'] .popup-arrow > svg {
   stroke-dasharray: 30px;
   stroke-dashoffset: -54px;
 }
+@media only screen and (max-width: 1000px){
+  html[data-theme='dark']  .popup-arrow > svg {
+    height:150px;
+    overflow: hidden;
+    width:150px;
+}
+}
+
 img.ss:hover,
 img.ss:focus {
   width: 104px;
@@ -414,9 +562,55 @@ img.ss:focus {
   width: 50%;
   padding: 5px;
 }
+@media only screen and (max-width: 1000px){
+  .popup-content {
+    margin:15px;
+    background: rgb(255, 255, 255);
+    width: 80%;
+    padding: 1px;
+  }
+}
 .my-popup-content {
   margin: auto;
   background: rgb(255, 255, 255);
-  width: 50%;
+  width: 80%;
   padding: 5px;
+  
 }
+@media only screen and (max-width: 1000px){
+  .my-popup-content{
+    height:200px;
+    overflow-y: auto;
+    padding:1px;
+    margin-left: -100px;
+    width: 80%;
+  }
+}
+.enlarge{
+  width:290px;
+  height: 200px;
+  margin-left: 16%;
+  border-width: 1px;
+  border-color: black;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 1000px){
+  .enlarge{
+    width:150px;
+  }
+}
+.areaimage{
+  height: 120px;
+  width: 100px;
+  margin: 15px;
+}
+.hovertext{
+position: absolute;
+margin-left: 150px;
+}
+@media only screen and (max-width: 1000px){
+.hovertext{
+  position: absolute;
+  width:100px;
+  margin-left: 35px;
+}}

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import ReactImageZoom from 'react-image-zoom';
 
 export default class Body extends React.Component {
 
@@ -12,7 +13,8 @@ export default class Body extends React.Component {
         super();
         this.state = {
            watch: true,
-           show: false
+           show: false,
+           image: 1,
         }
      }
 
@@ -29,7 +31,17 @@ export default class Body extends React.Component {
         toast.dark("Added to Wishlist !",  
         {position: toast.POSITION.TOP_CENTER, hideProgressBar: true, autoClose:3000})
     }
+    EnlargeHandler=(num)=>{
+            this.setState({
+                image : num
+            })
+    }
+
+
     render(){
+        const props={zoomPosition:'left', width:290,scale:0.4, height: 200, img:"https://upload.wikimedia.org/wikipedia/en/9/97/Angry_Birds_2.png"};
+        const props3={zoomPosition:'left',width:290, scale:0.4,height: 200, img:"https://i.ytimg.com/vi/DlHv8R-_cTA/maxresdefault.jpg"};
+        const propss={zoomPosition:'left', scale:0.4, width:290, height: 200, img:"https://img.etimg.com/thumb/msid-52166869,width-1200,height-900,imgsize-50741,overlay-etpanache/photo.jpg"}
         return(
             <div>
                 
@@ -41,7 +53,7 @@ export default class Body extends React.Component {
                 
                
                     <div className="CoverImage">
-                        <img src="https://lh3.googleusercontent.com/proxy/ORVTFF6_HlgFsTg08JHtd9am_Oz9XPsDrq1zw2vFKjpXNtVWcd8YV235yPOwgPpPPwiZSGiehNJFIFAn4sIR3mBc45SnIzfi6Q"
+                        <img src="https://bestcoverpix.com/wp-content/uploads/2014/02/angry-birds-cover.jpg"
                         alt="cover" className="Images"/>               
                     </div>   
 
@@ -89,16 +101,16 @@ export default class Body extends React.Component {
                             
                                     <Avatar  
                                     size="27" round
-                                    src="https://upload.wikimedia.org/wikipedia/commons/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg"/>
+                                    src="https://upload.wikimedia.org/wikipedia/commons/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg" />
 
                                     <Popup trigger={
-                                    <p className="castName" style={{cursor:'pointer'}}>Peter Dinklage</p>}position="right center" className="my-popup">
+                                    <p className="castName" style={{cursor:'pointer'}}>Peter Dinklage</p>}position="right center" className="popup-arrow">
 
                                     <div className="popup">
                                     <img style={{width:20, height:20, marginTop:5}}
                                     src="https://upload.wikimedia.org/wikipedia/commons/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg"/>
                                     <p className="castName" style={{lineHeight:1.6}}>
-                                   <span style={{fontWeight:'bold'}}> Peter Hayden Dinklage</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.[3] He also received a Golden Globe for the role in 2011 as well as a Screen Actors Guild Award in 2020.</p></div>
+                                   <span style={{fontWeight:'bold'}}> Peter Hayden Dinklage</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.</p></div>
                                     
                                     </Popup>
 
@@ -107,13 +119,13 @@ export default class Body extends React.Component {
                                     src="https://pyxis.nymag.com/v1/imgs/696/3eb/ddc761b580e626d8ca9fbd04df20b681c0-22-bill-hader-2.rsquare.w700.jpg"/>
 
                                     <Popup trigger={
-                                    <p className="castName" style={{cursor:'pointer'}}>Bill Hader</p>}position="right center" className="my-popup">
+                                    <p className="castName" style={{cursor:'pointer'}}>Bill Hader</p>}position="right center" className="popup-arrow">
 
                                     <div className="popup">
                                     <img style={{width:20, height:20, marginTop:5}}
                                     src="https://pyxis.nymag.com/v1/imgs/696/3eb/ddc761b580e626d8ca9fbd04df20b681c0-22-bill-hader-2.rsquare.w700.jpg"/>
                                     <p className="castName" style={{lineHeight:1.6}}>
-                                   <span style={{fontWeight:'bold'}}> Bill Hader</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.[3] He also received a Golden Globe for the role in 2011 as well as a Screen Actors Guild Award in 2020.</p></div>
+                                   <span style={{fontWeight:'bold'}}> Bill Hader</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.</p></div>
                                     
                                     </Popup>
 
@@ -122,13 +134,13 @@ export default class Body extends React.Component {
                                     src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/07/12/bddbc3bc-a38e-11e9-9a3c-98259c87fba2_image_hires_015643.jpg?itok=kfL6j7gi&v=1562867811"/>
 
                                     <Popup trigger={
-                                    <p className="castName" style={{cursor:'pointer'}}>Awakwafina</p>}position="right center" className="my-popup">
+                                    <p className="castName" style={{cursor:'pointer'}}>Awakwafina</p>}position="right center" className="popup-arrow">
 
                                     <div className="popup">
                                     <img style={{width:20, height:20, marginTop:5}}
                                     src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/07/12/bddbc3bc-a38e-11e9-9a3c-98259c87fba2_image_hires_015643.jpg?itok=kfL6j7gi&v=1562867811"/>
                                     <p className="castName" style={{lineHeight:1.6}}>
-                                   <span style={{fontWeight:'bold'}}> Awakwafina</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.[3] He also received a Golden Globe for the role in 2011 as well as a Screen Actors Guild Award in 2020.</p></div>
+                                   <span style={{fontWeight:'bold'}}> Awakwafina</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.</p></div>
                                     
                                     </Popup>
                                     <Avatar  
@@ -136,28 +148,28 @@ export default class Body extends React.Component {
                                     src="https://s3.r29static.com/bin/entry/f49/x,80/1908965/image.jpg"/>
 
                                     <Popup trigger={
-                                    <p className="castName" style={{cursor:'pointer'}}>Dove Cameron</p>}position="right center" className="my-popup">
+                                    <p className="castName" style={{cursor:'pointer'}}>Dove Cameron</p>}position="right center" className="popup-arrow">
 
                                     <div className="popup">
                                     <img style={{width:20, height:20, marginTop:5}}
                                     src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/07/12/bddbc3bc-a38e-11e9-9a3c-98259c87fba2_image_hires_015643.jpg?itok=kfL6j7gi&v=1562867811"/>
                                     <p className="castName" style={{lineHeight:1.6}}>
-                                   <span style={{fontWeight:'bold'}}> Dove Cameron</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.[3] He also received a Golden Globe for the role in 2011 as well as a Screen Actors Guild Award in 2020.</p></div>
+                                   <span style={{fontWeight:'bold'}}> Dove Cameron</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.</p></div>
                                     
                                     </Popup>
 
                                     <Avatar  
                                     size="27" round
-                                    src="https://static.wikia.nocookie.net/comedybangbang/images/0/09/Bloom.jpg/revision/latest?cb=20170417231549"/>
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg/220px-Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg"/>
 
                                     <Popup trigger={
-                                    <p className="castName" style={{cursor:'pointer'}}>Rachel Bloom</p>}position="right center" className="my-popup">
+                                    <p className="popup-arrow" className="castName" style={{cursor:'pointer'}}>Rachel Bloom</p>}position="right center" className="popup-arrow">
 
                                     <div className="popup">
                                     <img style={{width:20, height:20, marginTop:5}}
-                                    src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/07/12/bddbc3bc-a38e-11e9-9a3c-98259c87fba2_image_hires_015643.jpg?itok=kfL6j7gi&v=1562867811"/>
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg/220px-Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg"/>
                                     <p className="castName" style={{lineHeight:1.6}}>
-                                   <span style={{fontWeight:'bold'}}> Rachel Bloom</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.[3] He also received a Golden Globe for the role in 2011 as well as a Screen Actors Guild Award in 2020.</p></div>
+                                   <span style={{fontWeight:'bold'}}> Rachel Bloom</span> ( born June 11, 1969) is an American actor and producer. He received acclaim for portraying Tyrion Lannister on the HBO television series Game of Thrones from 2011 to 2019, for which he won the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series a record four times.</p></div>
                                     
                                     </Popup>
 
@@ -168,27 +180,27 @@ export default class Body extends React.Component {
                                     size="27" round
                                     src="https://s3.r29static.com/bin/entry/f49/x,80/1908965/image.jpg"/>
 
-                                    <p className="castName">Dove Cameron</p></div>
+                                    <p className="castNames">Dove Cameron</p></div>
                                         <div className="popup"><Avatar  
                                     size="27" round
                                     src="https://upload.wikimedia.org/wikipedia/commons/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg"/>
 
-                                    <p className="castName">Awakwafina</p></div>
+                                    <p className="castNames">Awakwafina</p></div>
                                         <div className="popup"><Avatar  
                                     size="27" round
-                                    src="https://static.wikia.nocookie.net/comedybangbang/images/0/09/Bloom.jpg/revision/latest?cb=20170417231549"/>
+                                    src="https://s3.r29static.com/bin/entry/f49/x,80/1908965/image.jpg"/>
 
-                                    <p className="castName">Rachel Bloom</p></div>
+                                    <p className="castNames">Rachel Bloom</p></div>
                                         <div className="popup"><Avatar  
                                     size="27" round
                                     src="https://pyxis.nymag.com/v1/imgs/696/3eb/ddc761b580e626d8ca9fbd04df20b681c0-22-bill-hader-2.rsquare.w700.jpg"/>
 
-                                    <p className="castName">Bill Hader</p></div>
+                                    <p className="castNames">Bill Hader</p></div>
                                         <div className="popup"><Avatar  
                                     size="27" round
-                                    src="https://static.wikia.nocookie.net/comedybangbang/images/0/09/Bloom.jpg/revision/latest?cb=20170417231549"/>
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg/220px-Rachel_Bloom_at_37th_College_Television_Awards-adj_%28cropped%29.jpg"/>
 
-                                    <p className="castName">Rachel Bloom</p></div>
+                                    <p className="castNames">Rachel Bloom</p></div>
                                     </Popup>
 
                         
@@ -199,18 +211,47 @@ export default class Body extends React.Component {
                             <p style={{fontWeight:'bold', marginTop:10, marginBottom:10}}>Screenshots:</p>
                         </div>
                         <div className="Screenshot">
+
+                        <div className="areaimage">
                         <img src="https://img.etimg.com/thumb/msid-52166869,width-1200,height-900,imgsize-50741,overlay-etpanache/photo.jpg"
-                        alt="cover" className="ss"/>  
+                        alt="cover" className="ss" onMouseEnter={(num)=>this.EnlargeHandler(1)}/>  </div>
 
+                        <div className="areaimage">
                         <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Angry_Birds_2.png"
-                        alt="cover" className="ss"/>  
-
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSm7wpkdZyFP62MAmhrhAdLsUgOXhpK1PbHhwaNRAaJlWpNGG4OtYQHQVpwULnyEPTym4k2egQUVkCSLSktaNluqZOsx2Nlni2SzxgP9Tc&usqp=CAU&ec=45725304"
-                        alt="cover" className="ss"/>  
-
+                        alt="cover" className="ss" onMouseEnter={(num)=>this.EnlargeHandler(2)}/>  </div>
+    
+                        <div className="areaimage">
                         <img src="https://i.ytimg.com/vi/DlHv8R-_cTA/maxresdefault.jpg"
-                        alt="cover" className="ss"/>  
+                        alt="cover" className="ss" onMouseEnter={(num)=>this.EnlargeHandler(3)}/>  </div>
+                        
+                        {this.state.image===1? 
+
+                        <div className="enlarge">                       
+                        <ReactImageZoom
+                        {...propss}
+                        /></div>
+                        /*<img src="https://img.etimg.com/thumb/msid-52166869,width-1200,height-900,imgsize-50741,overlay-etpanache/photo.jpg"
+                        alt="cover" className="enlarge"/> */
+                        : [
+                            (this.state.image===2? 
+                                <div className="enlarge"> 
+                                <ReactImageZoom
+                                    {...props}
+                                    /></div>
+                                /*<img src="https://upload.wikimedia.org/wikipedia/en/9/97/Angry_Birds_2.png"
+                        alt="cover" className="enlarge"/>*/:[
+                            (this.state.image===3?
+                                <div className="enlarge"> 
+                                <ReactImageZoom
+                                    {...props3}
+                                    /></div>
+                                /*<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSm7wpkdZyFP62MAmhrhAdLsUgOXhpK1PbHhwaNRAaJlWpNGG4OtYQHQVpwULnyEPTym4k2egQUVkCSLSktaNluqZOsx2Nlni2SzxgP9Tc&usqp=CAU&ec=45725304"
+                        alt="cover" className="enlarge" />*/:null)
+                        ])
+                        ]} 
+
                         </div>
+                       
 
                         <div>
                             <p style={{fontWeight:'bold', marginTop:-15}}>Description:</p>
@@ -226,59 +267,7 @@ export default class Body extends React.Component {
                             }</div>
                         </div>
                         
-
-                        <p className="casting">
-                        <span style={{fontWeight:'600'}}>Cast: </span>
-                        </p>
-
-                        <div className="Cast">
-                            
-                            <Avatar  
-                            size="27" round
-                            src="https://upload.wikimedia.org/wikipedia/commons/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg"/>
-
-                            <p className="castName">Peter Dinklage</p>
-
-                            <Avatar  
-                            size="27" round
-                            src="https://pyxis.nymag.com/v1/imgs/696/3eb/ddc761b580e626d8ca9fbd04df20b681c0-22-bill-hader-2.rsquare.w700.jpg"/>
-
-                            <p className="castName">Bill Hader</p>
-
-                            <Avatar  
-                            size="27" round
-                            src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/07/12/bddbc3bc-a38e-11e9-9a3c-98259c87fba2_image_hires_015643.jpg?itok=kfL6j7gi&v=1562867811"/>
-
-                            <p className="castName">Awakwafina</p>
-                            <Avatar  
-                            size="27" round
-                            src="https://s3.r29static.com/bin/entry/f49/x,80/1908965/image.jpg"/>
-
-                            <p className="castName">Dove Cameron</p>
-
-                            <Avatar  
-                            size="27" round
-                            src="https://static.wikia.nocookie.net/comedybangbang/images/0/09/Bloom.jpg/revision/latest?cb=20170417231549"/>
-
-                            <p className="castName">Rachel Bloom</p>
-
-                            <a href="#see" style={{marginTop:5, marginLeft:30, color:'#007eef'}}>See Full Cast & Crew</a>
-                    
-                </div>
-                <p style={{fontWeight:'bold', marginTop:10}}>Screenshots:</p>
-            <div className="Screenshot">
-                <img src="https://img.etimg.com/thumb/msid-52166869,width-1200,height-900,imgsize-50741,overlay-etpanache/photo.jpg"
-                alt="cover" className="ss"/>  
-
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Angry_Birds_2.png"
-                alt="cover" className="ss"/>  
-
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSm7wpkdZyFP62MAmhrhAdLsUgOXhpK1PbHhwaNRAaJlWpNGG4OtYQHQVpwULnyEPTym4k2egQUVkCSLSktaNluqZOsx2Nlni2SzxgP9Tc&usqp=CAU&ec=45725304"
-                alt="cover" className="ss"/>  
-
-                <img src="https://i.ytimg.com/vi/DlHv8R-_cTA/maxresdefault.jpg"
-                alt="cover" className="ss"/>  
-                </div>
+           
                     </div>
                     
                     

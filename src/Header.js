@@ -41,10 +41,11 @@ export default class Header extends React.Component {
  
       return (
          <div className="mainHeader">
-         <div className="header1">
-            <h2 className="mov">Mov</h2>
-            <h2 className="mov2">iex</h2>
-         </div>
+
+               <div className="header1">
+                  <h2 className="mov">Mov</h2>
+                  <h2 className="mov2">iex</h2>
+               </div>
 
 
         { this.state.prime?
@@ -82,7 +83,7 @@ export default class Header extends React.Component {
             <Avatar  size="27" round 
             src="https://mypustak-5.s3.ap-south-1.amazonaws.com/uploads/avatar/funny-png-avatar-2.png"/>
             </div>
-            <p style={{fontSize:12, marginTop:18, marginLeft:20, fontWeight:'bold', color:'#000'}}>Hii, Swati</p>
+            <p class="Hello">Hii, Swati</p>
             {this.state.hoover?
                <MdKeyboardArrowUp color='#000' style={{marginTop:19, marginLeft:15}}/>
                :
@@ -90,7 +91,7 @@ export default class Header extends React.Component {
             </button>
 
             {this.state.hoover?
-            <div style={{marginLeft:170, position:'absolute'}}>
+            <div className="hovertext">
                <li style={{fontSize:14, color:'#000', marginTop:5, listStyleType:'none', borderBottomWidth:0.5,
                cusror:'pointer'}} className="hoover">My Profile</li> 
                <li style={{fontSize:14, color:'#000',  listStyleType:'none'}} className="hoover">My Movies</li> 
